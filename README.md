@@ -1,4 +1,4 @@
-﻿# 🚀 Project: Data Pipelines with Airflow 
+﻿# 🚀 Project: Building Pipeline with Apache Airflow
 ## 📑 Table of Contents 
 * **✅ Definition**
     * **🔍 Project Overview** :
