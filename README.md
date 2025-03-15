@@ -1,6 +1,6 @@
 ﻿# 🚀 Project: Data Pipelines with Airflow 
 ## 📑 Table of Contents 
-* **Definition**
+* **✅ Definition**
     * **🔍 Project Overview** :
     A music streaming company, Sparkify, has decided that it is time to introduce more automation and monitoring to their data warehouse ETL pipelines and come to the conclusion that the best tool to achieve this is Apache Airflow.
     
@@ -60,7 +60,7 @@
 
 * **🙏 Acknowledgement** : Must give credit to Udacity for the project. You can't use this for your Udacity capstone project. Otherwise, feel free to use the code here as you would like!
 
-* **Bonus** ⭐: Here are a few key concepts for Airflow:
+* **⭐ Bonus** : Here are a few key concepts for Airflow:
            1. **📊 DAG (Directed Acyclic Graph)** : a workflow which glues all the tasks with inter-dependencies.
            2. **🔧 Operator** : a template for a specific type of work to be executed. For example, BashOperator represents how to execute a bash script while PythonOperator represents how to execute a python function, etc.
            3. **👀 Sensor** : a type of special operator which will only execute if a certain condition is met.
