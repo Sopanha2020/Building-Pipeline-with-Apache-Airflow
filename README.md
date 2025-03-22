@@ -36,13 +36,13 @@
 ![Sparkify Data Model](/images/Pipelineview.jpg)   
 
 * **🏃‍♂️ How to Run** : Open the terminal, type as below
-  i. **🖥️ create_cluster.ipynb** 
+  * i. **🖥️ create_cluster.ipynb** 
     1. Open the dwh.cfg and provide the AWS access keys and secret
     2. Launch a redshift cluster using create_cluster.ipynb and create an IAM role that has read access to S3.
     3. Add redshift database like host, dbname, dbuser, password and port number etc, and IAM role info like ARN to dwh.cfg.
-   ii. **📝 python create_tables.py** 
-   iii. **🔄 python etl.py** 
-   iv. **📊 analysis.ipynb**  - run your all analysis
+  * ii. **📝 python create_tables.py** 
+  * iii. **🔄 python etl.py** 
+  * iv. **📊 analysis.ipynb**  - run your all analysis
     
 * **📈 Final Result / Analysis** : Now Sparkify Analytics team can run multiple queries using data_analysis.ipynb notebook or Users can connect any tool like Amazon QuickSight, Power BI, Tableau to RedShift Cluster. They can do what if analysis or they can slice/dice the data as per their requirement. 
     1. 🎧 Currently how many users are listening songs? 
