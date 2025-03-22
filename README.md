@@ -23,9 +23,9 @@
     Airflow UI is allows any users to visualize the DAG in a graph view. The author of a data pipeline must define the structure of dependencies among tasks in order to visualize them. This specification is often written in a file called the DAG definition file, which lays out the anatomy of an Airflow job.
     
     While DAGs describe how to run a data pipeline, operators describe what to do in a data pipeline. Typically, there are three broad categories of operators:    
-       1. **👀 Sensors** : waits for a certain time, external file, or upstream data source
-       2. **🔧 Operators** : triggers a certain action (e.g. run a bash command, execute a python function, or execute a Hive query, etc)
-       3. **🔄 Transfers** : moves data from one location to another
+    1. **👀 Sensors** : waits for a certain time, external file, or upstream data source
+    2. **🔧 Operators** : triggers a certain action (e.g. run a bash command, execute a python function, or execute a Hive query, etc)
+    3. **🔄 Transfers** : moves data from one location to another
     
    For this project, I have build four different operators that will stage the data, transform the data, and run checks on data quality.
    * **📤 StageToRedshift Operator** : The stage operator is expected to be able to load any JSON and CSV formatted files from S3 to Amazon Redshift. The operator creates and runs a SQL COPY statement based on the parameters provided. The operator's parameters should specify where in S3 the file is loaded and what is the target table. The parameters should be used to distinguish between JSON and CSV file. Another important requirement of the stage operator is containing a templated field that allows it to load timestamped files from S3 based on the execution time and run backfills.
@@ -37,22 +37,22 @@
 
 * **🏃‍♂️ How to Run** : Open the terminal, type as below
        i. **🖥️ create_cluster.ipynb** 
-           1. Open the dwh.cfg and provide the AWS access keys and secret
-           2. Launch a redshift cluster using create_cluster.ipynb and create an IAM role that has read access to S3.
-           3. Add redshift database like host, dbname, dbuser, password and port number etc, and IAM role info like ARN to dwh.cfg.
+    1. Open the dwh.cfg and provide the AWS access keys and secret
+    2. Launch a redshift cluster using create_cluster.ipynb and create an IAM role that has read access to S3.
+    3. Add redshift database like host, dbname, dbuser, password and port number etc, and IAM role info like ARN to dwh.cfg.
        ii. **📝 python create_tables.py** 
        iii. **🔄 python etl.py** 
        iv. **📊 analysis.ipynb**  - run your all analysis
     
 * **📈 Final Result / Analysis** : Now Sparkify Analytics team can run multiple queries using data_analysis.ipynb notebook or Users can connect any tool like Amazon QuickSight, Power BI, Tableau to RedShift Cluster. They can do what if analysis or they can slice/dice the data as per their requirement. 
-          1. 🎧 Currently how many users are listening songs? 
-          2. 🌎 How the users are distributed across the geography?
-          3. 🎵 Which are the songs they are playing? 
+    1. 🎧 Currently how many users are listening songs? 
+    2. 🌎 How the users are distributed across the geography?
+    3. 🎵 Which are the songs they are playing? 
     
 * **💻 Software Requirements** : This project uses the following software and Python libraries:
-           1. 🐍 Python 3.0 
-           2. 🔌 psycopg2 
-           3. ☁️ Amazon RedShift 
+    1. 🐍 Python 3.0 
+    2. 🔌 psycopg2 
+    3. ☁️ Amazon RedShift 
         
     You will also need to have software installed to run and execute a Jupyter Notebook.
     If you do not have Python installed yet, it is highly recommended that you install the Anaconda distribution of Python, which already has the above packages and more included.    
@@ -60,9 +60,9 @@
 * **🙏 Acknowledgement** : Must give credit to Udacity for the project. You can't use this for your Udacity capstone project. Otherwise, feel free to use the code here as you would like!
 
 * **⭐ Bonus** : Here are a few key concepts for Airflow:
-           1. **📊 DAG (Directed Acyclic Graph)** : a workflow which glues all the tasks with inter-dependencies.
-           2. **🔧 Operator** : a template for a specific type of work to be executed. For example, BashOperator represents how to execute a bash script while PythonOperator represents how to execute a python function, etc.
-           3. **👀 Sensor** : a type of special operator which will only execute if a certain condition is met.
-           4. **✅ Task** : a parameterized instance of an operator/sensor which represents a unit of actual work to be executed.
-           5. **🔌 Plugin** : an extension to allow users to easily extend Airflow with various custom hooks, operators, sensors, macros, and web views.
-           6. **🏊‍♂️ Pools** : concurrency limit configuration for a set of Airflow tasks.
+    1. **📊 DAG (Directed Acyclic Graph)** : a workflow which glues all the tasks with inter-dependencies.
+    2. **🔧 Operator** : a template for a specific type of work to be executed. For example, BashOperator represents how to execute a bash script while PythonOperator represents how to execute a python function, etc.
+    3. **👀 Sensor** : a type of special operator which will only execute if a certain condition is met.
+    4. **✅ Task** : a parameterized instance of an operator/sensor which represents a unit of actual work to be executed.
+    5. **🔌 Plugin** : an extension to allow users to easily extend Airflow with various custom hooks, operators, sensors, macros, and web views.
+    6. **🏊‍♂️ Pools** : concurrency limit configuration for a set of Airflow tasks.
