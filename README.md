@@ -57,8 +57,6 @@
     You will also need to have software installed to run and execute a Jupyter Notebook.
     If you do not have Python installed yet, it is highly recommended that you install the Anaconda distribution of Python, which already has the above packages and more included.    
 
-* **🙏 Acknowledgement** : Must give credit to Udacity for the project. You can't use this for your Udacity capstone project. Otherwise, feel free to use the code here as you would like!
-
 * **⭐ Bonus** : Here are a few key concepts for Airflow:
     1. **📊 DAG (Directed Acyclic Graph)** : a workflow which glues all the tasks with inter-dependencies.
     2. **🔧 Operator** : a template for a specific type of work to be executed. For example, BashOperator represents how to execute a bash script while PythonOperator represents how to execute a python function, etc.
